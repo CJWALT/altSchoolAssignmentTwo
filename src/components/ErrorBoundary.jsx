@@ -1,6 +1,6 @@
-import React from "react";
+import {React, Component} from "react";
  
-class ErrorBoundary extends React.Component {
+class ErrorBoundary extends Component {
  
   constructor(props) {
     super(props);
@@ -20,17 +20,22 @@ class ErrorBoundary extends React.Component {
     if (this.state.errorInfo) {
  
       return (
+        
         <div>
           <h2>An Error Has Occurred</h2>
-          <details>
+          {/* <details>
             {this.state.error && this.state.error.toString()}
             <br />
             {this.state.errorInfo.componentStack}
-          </details>
+          </details> */}
         </div>
+        
       );
+      
     }
-    
+    // console.log('an error in pagination')
     return this.props.children;
   }
 }
+
+export default ErrorBoundary;

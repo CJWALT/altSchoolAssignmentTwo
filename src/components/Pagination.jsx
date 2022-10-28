@@ -1,12 +1,12 @@
 import React, { useState } from 'react'
 import ReactPaginate from 'react-paginate';
 
+
 const Pagination = () => {
-
-
+   
     //state to get user data form an api
    const [responseUser, setResponseUser] =useState([]);
-
+    
     //set loading state 
     const [loading, setLoading] = useState(false);
 
@@ -24,8 +24,11 @@ const Pagination = () => {
             setResponseUser(results);
                 
             }catch(err){ 
+                if (err) {
+                    throw new Error('something went wrong ');
+                }
                 setLoading(false)
-                console.error("couldnt fetch data")
+                
             }
     };
 
@@ -76,7 +79,7 @@ const Pagination = () => {
                         Country
                     </h3>
                 </div>
-                {loading ? <p>Loading..</p> : responseUser.map(({gender, name, phone, location, email})=>{ 
+                {loading ? <p className='loading'>Loading...</p> : responseUser.map(({gender, name, phone, location, email})=>{ 
                     return(
                             
                           <div className="user__table-body" key={email}>
@@ -112,6 +115,7 @@ const Pagination = () => {
                 /> 
 
     </>
+    
 )
 }
 
