@@ -64,7 +64,7 @@ ul li:last-child, ul li:last-child a.user__link{
 }
 .heading--bar{ 
   width:80%; 
-  background:linear-gradient(90deg, #32aa3f, #2afee6);;
+  background:linear-gradient(90deg, #32aa23);
   margin-bottom:5rem;
 }
 

@@ -21,15 +21,17 @@ function App() {
                 </li>
             </ul>
             <hr className='heading--bar'/>
-           <Routes> 
-            <Route path="/" element={<Home/>} />
-            <Route path="/User/*" element={<User />}/>
-            <Route path="*" element={<PageNotFound />}/>
-            </Routes>
+           
+              <Routes>   
+                <Route path="/" element={<Home/>} />
+                <Route path="/User/*" element={<User />}/>
+                <Route path="*" element={<PageNotFound />}/>
+              </Routes>
+           
     </header>
     </main>
-    </ErrorBoundary>
-
+    
+</ErrorBoundary>
     );
 }
 

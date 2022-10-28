@@ -22,18 +22,14 @@ class ErrorBoundary extends Component {
       return (
         
         <div>
-          <h2>An Error Has Occurred</h2>
-          {/* <details>
-            {this.state.error && this.state.error.toString()}
-            <br />
-            {this.state.errorInfo.componentStack}
-          </details> */}
+          <h2>An Error Has Occured in this component</h2>
+      
         </div>
         
       );
       
     }
-    // console.log('an error in pagination')
+    
     return this.props.children;
   }
 }

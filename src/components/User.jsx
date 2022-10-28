@@ -9,14 +9,14 @@ const User = () => {
   
   <>
   
-    <ErrorBoundary>
+ 
         <Link to ="/User/Pagination" className='user__link-btn'>click to view users</Link>
 
         <Routes> 
             <Route path="/Pagination" element={<Pagination />}/>
         </Routes>
 
-    </ErrorBoundary>
+
 </>
   )
 }
